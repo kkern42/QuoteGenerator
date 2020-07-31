@@ -7,7 +7,7 @@ function Quoting(props) {
   const [index, setindex] = React.useState(4);
   const change = newValue => setindex(Math.floor(Math.random() * (+5 - +0)) + +0);
   return (
-    <div>
+    <div style={{ maxWidth: "100%" }}>
       <div className="quote">
         "{props.quotes[index].quote}"
       </div>

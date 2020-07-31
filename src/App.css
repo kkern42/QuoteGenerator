@@ -7,10 +7,24 @@
   color: #61dafb;
 }
 
-.quote{
+
+@media screen and (min-width: 100px) and (max-width: 800px){
+  .quote{
+font-size: 10px;
+margin-left: 100px;
+  margin-right: 100px;
+  }
+
+}
+
+
+@media screen and (min-width: 800px) and (max-width: 1600px) {
+  .quote{
+  font-size: 20px;
   margin-left: 150px;
   margin-right: 150px;
-  
+  }
+
 }
 
 .button{
