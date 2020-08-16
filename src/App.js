@@ -4,7 +4,7 @@ import './App.css';
 
 function Quoting(props) {
   const [index, setindex] = React.useState(4);
-  const change = newValue => setindex(Math.floor(Math.random() * (+5 - +0)) + +0);
+  const change = newValue => setindex(Math.floor(Math.random() * (+6 - +0)) + +0);
   return (
     <div style={{ maxWidth: "100%" }}>
       <div className="quote">
@@ -45,6 +45,10 @@ function App() {
     {
       quote: "My real life was when I was just a working guy. You know, it's OK to head out for Wonderful. But on your way to Wonderful, you're gonna have to pass through All Right. And when you get to All Right, take a good look around, and get used to it, because that may be as far as you're gonna go.",
       speaker: "Bill Withers"
+    },
+    {
+      quote: "Nowadays, if you don't read the news you uninformed. If you do read the news your misinformed.",
+      speaker: "Denzel Washingtion"
     },
   ];
 
