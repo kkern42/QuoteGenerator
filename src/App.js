@@ -4,13 +4,11 @@ import './App.css';
 
 const Quoting = ({quotes}) => {
   const [getindex, setindex] = React.useState(3);
-  const [quote, setQuote] = React.useState("hey");
 
   const change = () => {
     console.log('here');
     let index = Math.floor(Math.random() * (+5 - +0)) + +0
     setindex(index);
-    setQuote(quotes[index].quote);
   }
  
   return (
