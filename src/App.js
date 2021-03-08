@@ -2,19 +2,24 @@ import React from 'react';
 import './App.css';
 
 
-function Quoting(props) {
-  const [index, setindex] = React.useState(4);
-  const change = newValue => setindex(Math.floor(Math.random() * (+6 - +0)) + +0);
-  return (
-    <div style={{ maxWidth: "100%" }}>
-      <div className="quote">
-        "{props.quotes[index].quote}"
-      </div>
-      <div className="speaker">
-        -{props.quotes[index].speaker}
-      </div>
+const Quoting = ({quotes}) => {
+  const [getindex, setindex] = React.useState(3);
+  const [quote, setQuote] = React.useState("hey");
 
-      <div><button className="button" onClick={change}>New Quote</button></div>
+  const change = () => {
+    console.log('here');
+    let index = Math.floor(Math.random() * (+5 - +0)) + +0
+    setindex(index);
+    setQuote(quotes[index].quote);
+  }
+ 
+  return (
+    <div style={{ maxWidth: "50%"}}>      
+      <div>
+      {quotes[getindex].quote}
+      </div>
+      <p>-</p><div className="speaker">{quotes[getindex].speaker}</div>
+      <div style={{ marginTop: '1em'}} ><button className="button" onClick={()=>change()}>New Quote</button></div>
 
     </div>
   );
@@ -31,10 +36,6 @@ function App() {
       speaker: "Theodore Roosevelt"
     },
     {
-      quote: "A short saying often contains much wisdom.",
-      speaker: "Sophocles"
-    },
-    {
       quote: "The only true wisdom is in knowing you know nothing.",
       speaker: "Socrates"
     },
@@ -47,8 +48,8 @@ function App() {
       speaker: "Bill Withers"
     },
     {
-      quote: "Nowadays, if you don't read the news you uninformed. If you do read the news your misinformed.",
-      speaker: "Denzel Washingtion"
+      quote: "If you can lock yourself in a closet and just groove man, don't rob yourself of that.",
+      speaker: "Bill Withers"
     },
   ];
 
